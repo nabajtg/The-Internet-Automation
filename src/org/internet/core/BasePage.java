@@ -1,6 +1,7 @@
 package org.internet.core;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -27,6 +28,10 @@ public class BasePage {
 			return null;
 		}
 		
+	}
+	
+	public List<WebElement> findElements(By locator) {
+		return driver.findElements(locator);
 	}
 	
 	public void clickElement(By locator) {

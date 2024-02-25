@@ -17,7 +17,7 @@ import org.openqa.selenium.devtools.v119.network.Network;
 
 public class BasicAuth extends BasePage{
 	private WebDriver driver;
-	private ChromeDriver chromeDriver = new ChromeDriver();
+	private ChromeDriver chromeDriver;// = new ChromeDriver();
 	private AssertUtil assertUtil = new AssertUtil();
 	
 	public BasicAuth(WebDriver driver) {

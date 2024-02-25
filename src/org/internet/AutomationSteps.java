@@ -34,6 +34,11 @@ public class AutomationSteps {
 		return this;
 	}
 	
+	public AutomationSteps goToBrokenImagesAndVerify() {
+		pages.brokenImages.goToBrokenImagesAndVerify();
+		return this;
+	}
+	
 	public AutomationSteps cleanUp() {
 		driver.quit();
 		return this;
