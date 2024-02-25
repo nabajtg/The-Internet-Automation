@@ -1,8 +1,12 @@
 package org.internet.core;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
 	private WebDriver driver;
@@ -46,6 +50,27 @@ public class BasePage {
 			System.out.println("Unable to get Text: " + locator);
 			System.out.println(e.getMessage());
 			return null;
+		}
+	}
+	
+	public boolean isElementVisible(By locator) {
+		try {
+			driver.findElement(locator);
+			System.out.println("Element visible: " + locator.toString());
+			return true;
+		}catch(Exception e) {
+			System.out.println("Element not visible: " + locator.toString());
+			return false;
+		}
+	}
+	
+	public void waitForAnElement(By locator) {
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+			wait.until(driver -> ExpectedConditions.visibilityOfElementLocated(locator));
+		}catch(Exception e) {
+			System.out.println("Waited for 20 Secs, Could Not found element: " + locator.toString());
+			System.out.println(e.getMessage());
 		}
 	}
 }

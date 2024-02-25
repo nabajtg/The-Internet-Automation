@@ -24,6 +24,11 @@ public class AutomationSteps {
 		return this;
 	}
 	
+	public AutomationSteps goToAddRemoveAndVerify() {
+		pages.addRemove.goToAddRemoveAndValidate();
+		return this;
+	}
+	
 	public AutomationSteps cleanUp() {
 		driver.quit();
 		return this;
