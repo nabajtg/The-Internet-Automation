@@ -9,7 +9,8 @@ public class VerifyHomePage{
 	public void runTest() {
 		new AutomationSteps()
 		.initialize()
-		.goToHomePageAndVerify();
+		.goToHomePageAndVerify()
+		.cleanUp();
 		
     }
 	
