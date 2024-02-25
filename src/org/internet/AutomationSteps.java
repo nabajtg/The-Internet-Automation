@@ -29,6 +29,11 @@ public class AutomationSteps {
 		return this;
 	}
 	
+	public AutomationSteps goToBasicAuthAndVerify() {
+		pages.basicAuth.goToBasicAuthAndVerify();
+		return this;
+	}
+	
 	public AutomationSteps cleanUp() {
 		driver.quit();
 		return this;
