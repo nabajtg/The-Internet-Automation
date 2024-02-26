@@ -6,6 +6,8 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -43,6 +45,19 @@ public class BasePage {
 			System.out.println(e.getMessage());
 		}
 		
+	}
+	
+	public void rightClickElement(By locator) {
+		System.out.println("Right Clicking on: " + locator.toString());
+		
+		WebElement element = findElement(locator);
+		try {
+			Actions actions = new Actions(driver);
+			actions.contextClick(element).build().perform();
+		}catch(Exception e) {
+			System.out.println("Element could not be right clicked: " + locator.toString());
+			System.out.println(e.getMessage());
+		}
 	}
 	
 	public String getText(By locator) {

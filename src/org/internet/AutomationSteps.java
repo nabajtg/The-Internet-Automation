@@ -50,6 +50,11 @@ public class AutomationSteps {
 		return this;
 	}
 	
+	public AutomationSteps goToContextMenuAndVerify() {
+		pages.contextMenu.goToContextMenuAndVerify();
+		return this;
+	}
+	
 	public AutomationSteps cleanUp() {
 		driver.quit();
 		return this;

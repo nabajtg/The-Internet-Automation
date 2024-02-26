@@ -2,8 +2,8 @@ package org.internet.pageobjects;
 
 import org.internet.constants.Constants;
 import org.internet.core.BasePage;
-import org.internet.locators.CommonLocators;
 import org.internet.utils.AssertUtil;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage extends BasePage{
@@ -14,6 +14,8 @@ public class HomePage extends BasePage{
 		super(driver);
 		this.driver = driver;
 	}
+	
+	public static final By HOME_PAGE_HEADING = By.cssSelector("div#content h1.heading");
 	
 	public static final String URL = "https://the-internet.herokuapp.com/";
 	public static final String EXPECTED_HOME_PAGE_HEADING = "Welcome to the-internet";
@@ -27,7 +29,7 @@ public class HomePage extends BasePage{
 
 	private void verifyHomePage() {
 		System.out.println("Verifying HomePage");
-		String actualHeading = getText(CommonLocators.HOME_PAGE_HEADING);
+		String actualHeading = getText(HOME_PAGE_HEADING);
 		assertUtil.assertEquals(EXPECTED_HOME_PAGE_HEADING, actualHeading, "Home Page Heading");
 		
 	}

@@ -6,6 +6,7 @@ import org.internet.pageobjects.BasicAuth;
 import org.internet.pageobjects.BrokenImages;
 import org.internet.pageobjects.ChallengingDom;
 import org.internet.pageobjects.Checkboxes;
+import org.internet.pageobjects.ContextMenu;
 import org.internet.pageobjects.HomePage;
 import org.openqa.selenium.WebDriver;
 
@@ -17,6 +18,7 @@ public class PageController {
 	public BrokenImages brokenImages;
 	public ChallengingDom challengingDom;
 	public Checkboxes checkboxes;
+	public ContextMenu contextMenu;
 	
 	public PageController initializePageObjects(WebDriver driver) {
 		abTesting = new AbTesting(driver);
@@ -26,6 +28,7 @@ public class PageController {
 		brokenImages = new BrokenImages(driver);
 		challengingDom = new ChallengingDom(driver);
 		checkboxes = new Checkboxes(driver);
+		contextMenu = new ContextMenu(driver);
 		return this;
 	}
 }
