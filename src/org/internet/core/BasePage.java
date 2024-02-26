@@ -72,10 +72,20 @@ public class BasePage {
 	public void waitForAnElement(By locator) {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-			wait.until(driver -> ExpectedConditions.visibilityOfElementLocated(locator));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		}catch(Exception e) {
 			System.out.println("Waited for 20 Secs, Could Not found element: " + locator.toString());
 			System.out.println(e.getMessage());
 		}
+	}
+	
+	public void sleep(int seconds) {
+		long miliSec = seconds * 1000;
+		try {
+			Thread.sleep(miliSec);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		};
 	}
 }

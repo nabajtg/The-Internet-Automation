@@ -1,25 +1,25 @@
 package org.internet.scripts;
 
 import org.internet.AutomationSteps;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class TC03_VerifyAddRemovePage{
 	
+	AutomationSteps steps = new AutomationSteps();
+	
 	@Test
 	public void runTest() {
-		new AutomationSteps()
-		.initialize()
+		steps.initialize()
 		.goToHomePageAndVerify()
 		.goToAddRemoveAndVerify()
-		.cleanUp();
+		;
 		
     }
 	
+	@AfterTest
+	public void cleanUp() {
+		steps.cleanUp();
+	}
 
-    
-
-
-	
-	
-	
 }

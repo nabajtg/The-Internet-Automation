@@ -4,15 +4,14 @@ import org.internet.AutomationSteps;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-public class TC02_VerifyAbTesting {
-	
+public class TC06_ChallengingDOM {
 	AutomationSteps steps = new AutomationSteps();
 	
 	@Test
 	public void runTest() {
 		steps.initialize()
 		.goToHomePageAndVerify()
-		.goToAbTestingAndVerify()
+		.goToChanllengingDomAndVerify()
 		;
 		
     }
@@ -21,4 +20,5 @@ public class TC02_VerifyAbTesting {
 	public void cleanUp() {
 		steps.cleanUp();
 	}
+	
 }

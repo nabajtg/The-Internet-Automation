@@ -2,6 +2,7 @@ package org.internet;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 
 public class AutomationSteps {
 	private WebDriver driver;
@@ -39,6 +40,12 @@ public class AutomationSteps {
 		return this;
 	}
 	
+	public AutomationSteps goToChanllengingDomAndVerify() {
+		pages.challengingDom.goToChanllengingDomAndVerify();
+		return this;
+	}
+	
+	@AfterTest
 	public AutomationSteps cleanUp() {
 		driver.quit();
 		return this;
