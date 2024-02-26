@@ -45,7 +45,11 @@ public class AutomationSteps {
 		return this;
 	}
 	
-	@AfterTest
+	public AutomationSteps goToCheckboxesAndVrify() {
+		pages.checkboxes.goToCheckboxesAndVrify();
+		return this;
+	}
+	
 	public AutomationSteps cleanUp() {
 		driver.quit();
 		return this;
