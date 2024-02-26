@@ -17,13 +17,13 @@ public class AssertUtil extends SoftAssert {
 		ITestResult result = Reporter.getCurrentTestResult();
         result.setStatus(ITestResult.FAILURE);
         results.add("VALIDATION <FAILED> FOR: " + assertCommand.getMessage() + 
-        		", EXPECTED: " + assertCommand.getExpected() + ", ACTUAL: " + assertCommand.getExpected());
+        		", EXPECTED: " + assertCommand.getExpected() + ", ACTUAL: " + assertCommand.getActual());
 	}
     
     @Override
 	public void onAssertSuccess(IAssert<?> assertCommand) {
     	results.add("VALIDATION <PASSED> FOR: " + assertCommand.getMessage() + 
-        		", EXPECTED: " + assertCommand.getExpected() + ", ACTUAL: " + assertCommand.getExpected());
+        		", EXPECTED: " + assertCommand.getExpected() + ", ACTUAL: " + assertCommand.getActual());
 	}
     
     @Override

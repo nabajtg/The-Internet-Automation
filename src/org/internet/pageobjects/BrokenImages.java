@@ -52,11 +52,7 @@ public class BrokenImages extends BasePage{
 						.build();
 				try {
 					HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-					boolean isNotBroken = true;
-					if(response.body().equals("<h1>Not Found</h1>")) {
-						isNotBroken = false;
-					}
-					assertUtil.assertEquals(isNotBroken, true, "Image not Broken");
+					assertUtil.assertEquals(response.statusCode(), 200, "Image GET status code");
 					
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
