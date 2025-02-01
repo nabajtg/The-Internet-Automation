@@ -1,6 +1,5 @@
 package org.internet.pageobjects;
 
-import org.internet.core.BasePage;
 import org.internet.utils.AssertUtil;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;

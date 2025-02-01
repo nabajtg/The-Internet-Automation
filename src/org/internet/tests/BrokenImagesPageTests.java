@@ -1,16 +1,19 @@
-package org.internet.scripts;
+package org.internet.tests;
 
 import org.internet.AutomationSteps;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-public class TC01_VerifyHomePage{
+public class BrokenImagesPageTests {
 	
 	AutomationSteps steps = new AutomationSteps();
 	
 	@Test
 	public void runTest() {
-		steps.initialize().goToHomePageAndVerify();
+		steps.initialize()
+		.goToHomePageAndVerify()
+		.goToBrokenImagesAndVerify()
+		;
 		
     }
 	
@@ -18,12 +21,5 @@ public class TC01_VerifyHomePage{
 	public void cleanUp() {
 		steps.cleanUp();
 	}
-	
-
-    
-
-
-	
-	
 	
 }

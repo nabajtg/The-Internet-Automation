@@ -1,10 +1,10 @@
-package org.internet.scripts;
+package org.internet.tests;
 
 import org.internet.AutomationSteps;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-public class TC07_CheckBoxes {
+public class CheckBoxesPageTests {
 	AutomationSteps steps = new AutomationSteps();
 	
 	@Test

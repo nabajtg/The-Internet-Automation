@@ -1,13 +1,14 @@
-package org.internet.core;
+package org.internet.pageobjects;
 
 import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -16,6 +17,7 @@ public class BasePage {
 	
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 	public WebElement findElement(By locator) {
@@ -24,7 +26,7 @@ public class BasePage {
 			WebElement element = driver.findElement(locator);
 			System.out.println("Element found: " + locator.toString());
 			return element;
-		}catch(Exception e) {
+		}catch(NoSuchElementException e) {
 			System.out.println("Element not found: " + locator.toString());
 			System.out.println(e.getMessage());
 			return null;
@@ -99,7 +101,6 @@ public class BasePage {
 		try {
 			Thread.sleep(miliSec);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		};
 	}

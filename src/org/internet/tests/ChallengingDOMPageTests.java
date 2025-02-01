@@ -1,17 +1,17 @@
-package org.internet.scripts;
+package org.internet.tests;
 
 import org.internet.AutomationSteps;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-public class TC08_ContextMenu {
+public class ChallengingDOMPageTests {
 	AutomationSteps steps = new AutomationSteps();
 	
 	@Test
 	public void runTest() {
 		steps.initialize()
 		.goToHomePageAndVerify()
-		.goToContextMenuAndVerify()
+		.goToChanllengingDomAndVerify()
 		;
 		
     }

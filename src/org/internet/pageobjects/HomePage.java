@@ -1,7 +1,6 @@
 package org.internet.pageobjects;
 
 import org.internet.constants.Constants;
-import org.internet.core.BasePage;
 import org.internet.utils.AssertUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

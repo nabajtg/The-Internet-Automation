@@ -1,10 +1,10 @@
-package org.internet.scripts;
+package org.internet.tests;
 
 import org.internet.AutomationSteps;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-public class TC03_VerifyAddRemovePage{
+public class AbTestingTests {
 	
 	AutomationSteps steps = new AutomationSteps();
 	
@@ -12,7 +12,7 @@ public class TC03_VerifyAddRemovePage{
 	public void runTest() {
 		steps.initialize()
 		.goToHomePageAndVerify()
-		.goToAddRemoveAndVerify()
+		.goToAbTestingAndVerify()
 		;
 		
     }
@@ -21,5 +21,4 @@ public class TC03_VerifyAddRemovePage{
 	public void cleanUp() {
 		steps.cleanUp();
 	}
-
 }

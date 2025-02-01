@@ -2,10 +2,8 @@ package org.internet.utils;
 
 import org.testng.asserts.SoftAssert;
 
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import org.testng.ITestResult;
 import org.testng.Reporter;

@@ -1,9 +1,9 @@
-package org.internet.scripts;
+package org.internet.tests;
 
 import org.internet.AutomationSteps;
 import org.testng.annotations.Test;
 
-public class TC04_VerifyBasicAuth{
+public class BasicAuthPageTests{
 	
 	@Test
 	public void runTest() {

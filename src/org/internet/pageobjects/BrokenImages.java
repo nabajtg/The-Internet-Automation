@@ -8,7 +8,6 @@ import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.util.List;
 
-import org.internet.core.BasePage;
 import org.internet.utils.AssertUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
